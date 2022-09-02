@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+
+https://www.storyblok.com/faq/setting-up-https-on-localhost-in-nuxt-3
+
 
 ## Setup
 

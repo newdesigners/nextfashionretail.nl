@@ -1,0 +1,22 @@
+@layer {
+  body {
+    @apply font-poppins font-medium text-12 lg:text-28;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-extrabold;
+  }
+
+  h1 {
+    @apply text-20 lg:text-40;
+  }
+
+  h2 {
+    @apply font-bold text-12 lg:text-36;
+  }
+}
