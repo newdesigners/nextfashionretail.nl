@@ -37,15 +37,17 @@
 <template>
   <header
     class="w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-white overflow-hidden lg:h-full"
-    :class="{ 'h-[475px] bg-nfr-beige' : isOpen }"
+    :class="{ 'h-[475px] bg-nfr-beige lg:bg-transparent' : isOpen }"
   >
     <div class="container lg:flex justify-between items-center">
       <div class="flex justify-between items-center py-10 lg:py-28">
-        <Svg
-          :color="isOpen ? '#000' : '#FFF'"
-          type="logo"
-          class="lg:w-[136px] h-auto"
-        />
+        <NuxtLink to="/">
+          <Svg
+            :color="isOpen ? '#000' : '#FFF'"
+            type="logo"
+            class="lg:w-[136px] h-auto header__logo"
+          />
+        </NuxtLink>
         <Menu
           @click="onClick"
           :state="isOpen"
@@ -78,7 +80,11 @@ a.router-link-active {
   @apply text-nfr-green underline;
 }
 
-svg path {
-  @apply lg:fill-black;
+.header {
+  &__logo {
+    svg path {
+      @apply lg:fill-white;
+    }
+  }
 }
 </style>

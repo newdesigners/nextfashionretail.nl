@@ -1,4 +1,4 @@
-@layer {
+@layer base {
   body {
     @apply font-poppins font-medium text-12 lg:text-28;
   }
@@ -18,5 +18,9 @@
 
   h2 {
     @apply font-bold text-12 lg:text-36;
+  }
+  
+  a {
+    @apply hover:text-nfr-green;
   }
 }
