@@ -36,14 +36,19 @@
 
 <template>
   <header
-    class="w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-white overflow-hidden lg:h-full"
+    class="absolute w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-transparent overflow-hidden lg:h-[auto] z-50"
     :class="{ 'h-[475px] bg-nfr-beige lg:bg-transparent' : isOpen }"
   >
     <div class="container lg:flex justify-between items-center">
-      <div class="flex justify-between items-center py-10 lg:py-28">
-        <NuxtLink to="/">
+      <div
+        class="flex justify-between items-center py-10 lg:py-28"
+        :class="{ 'header--open' : isOpen}"
+      >
+        <NuxtLink
+          @click="onClose"
+          to="/"
+        >
           <Svg
-            :color="isOpen ? '#000' : '#FFF'"
             type="logo"
             class="lg:w-[136px] h-auto header__logo"
           />
@@ -65,7 +70,7 @@
           <li 
             v-for="(route, index) in routes"
             :key="index"
-            class="text-14 font-semibold mb-4 lg:text-[22px] lg:mb-0 lg:mr-8 lg:last:mr-0"
+            class="text-14 font-semibold mb-4 lg:text-[22px] lg:mb-0 lg:mr-8 lg:last:mr-0 lg:text-white"
           >
             <NuxtLink :to="route.url">{{ route.name }}</NuxtLink>
           </li>
@@ -83,7 +88,17 @@ a.router-link-active {
 .header {
   &__logo {
     svg path {
-      @apply lg:fill-white;
+      @apply fill-white;
+    }
+  }
+}
+
+.header {
+  &--open {
+    .header__logo {
+      svg path {
+        @apply fill-black;
+      }
     }
   }
 }
