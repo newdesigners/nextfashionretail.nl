@@ -1,5 +1,7 @@
 <script setup>
-  const story = await useStoryblok('home', { version: 'draft' })
+  const route = useRoute()
+  const slug = route.params.slug
+  const story = await useStoryblok(slug ? slug : 'home', { version: 'draft' })
 </script>
  
 <template>
