@@ -1,6 +1,6 @@
 @layer base {
   body {
-    @apply font-poppins font-medium text-12 lg:text-28;
+    @apply font-poppins font-medium text-12 xl:text-28;
   }
   
   h1,
@@ -12,12 +12,12 @@
     @apply font-extrabold;
   }
 
-  h1 {
-    @apply text-20 lg:text-40;
+  h1, h2 {
+    @apply text-20 xl:text-40;
   }
 
-  h2 {
-    @apply font-bold text-12 lg:text-36;
+  h3 {
+    @apply font-bold text-12 xl:text-36;
   }
   
   a {
