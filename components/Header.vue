@@ -1,7 +1,8 @@
 <script setup>
+  const route = useRoute()
+  const isHome = route.params.slug === ''
   const routes = ref([])
   const isOpen = ref(false)
-
   const onClick = () => {
     isOpen.value = !isOpen.value
   }
@@ -35,13 +36,14 @@
 </script>
 
 <template>
+  <pre>{{}}</pre>
   <header
     class="absolute w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-transparent overflow-hidden lg:h-[auto] z-50"
-    :class="{ 'h-[475px] bg-nfr-beige lg:bg-transparent' : isOpen }"
+    :class="{ 'h-[475px] !bg-nfr-beige lg:bg-transparent' : isOpen }"
   >
     <div class="container lg:flex justify-between items-center">
       <div
-        class="flex justify-between items-center py-10 lg:py-28"
+        class="flex justify-between items-center py-10 lg:py-12"
         :class="{ 'header--open' : isOpen}"
       >
         <NuxtLink
@@ -50,7 +52,8 @@
         >
           <Svg
             type="logo"
-            class="lg:w-[136px] h-auto header__logo"
+            class="lg:w-[110px] h-auto header__logo"
+            :class="{ 'header__logo--reverse' : $route.params.slug === '' }"
           />
         </NuxtLink>
         <Menu
@@ -88,7 +91,13 @@ a.router-link-active {
 .header {
   &__logo {
     svg path {
-      @apply fill-white;
+      @apply fill-black;
+    }
+
+    &--reverse {
+      svg path {
+        @apply fill-white;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 @layer base {
   body {
-    @apply font-poppins font-medium text-12 xl:text-20;
+    @apply font-poppins font-medium text-12 lg:text-14 xl:text-16 2xl:text-20 leading-[1.9];
   }
   
   h1,
