@@ -8,13 +8,13 @@
     class="bg-nfr-beige"
   >
     <div class="container py-14">
-      <article class="sm:text-center pb-8 sm:pb-16 sm:w-4/5 sm:mx-auto">
+      <article class="sm:text-center pb-10 sm:pb-16 sm:w-3/4 sm:mx-auto">
         <h2 class="pb-5">{{ blok.title }}</h2>
-        <p class >{{ blok.description }}</p>
+        <p class="lg:text-[14px] xl:text-[16px]" >{{ blok.description }}</p>
       </article>
       <ul
         v-if="blok.cards"
-        class="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-y-5 sm:gap-x-14"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-y-8 sm:gap-x-14 md:gap-x-20 md:gap-y-10 lg:gap-x-28 lg:grid-cols-[minmax(0,_46%)_minmax(0,_46%)]"
       >
         <li
           v-for="card in blok.cards"
