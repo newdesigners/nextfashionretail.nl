@@ -2,6 +2,6 @@
   <main>
     <Header />
     <slot />
-    <Footer />
+    <MainFooter />
   </main>
 </template>

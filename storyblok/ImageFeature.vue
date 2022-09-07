@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <section class="py-16 xl:py-44">
+  <section 
+    v-editable="blok"
+    class="py-16 xl:py-44"
+  >
     <div class="container items-center flex flex-col sm:flex-row lg:w-5/6 xl:w-[90%] gap-[70px] lg:gap-0 lg:justify-between">
       <figure 
         v-if="blok.image.filename"

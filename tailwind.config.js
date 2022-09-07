@@ -5,11 +5,17 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        padding: '46px',
+        padding: {
+          DEFAULT: '46px',
+        },
       },
       colors: {
         'nfr-beige': '#FFF1E5',
         'nfr-green' : '#00E676',
+        'nfr-green' : {
+          DEFAULT: '#00E676',
+          light: '#4AEB9D',
+        },
       },
       fontFamily: {
         poppins : [
