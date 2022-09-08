@@ -1,12 +1,9 @@
 <script setup>
-  const route = useRoute()
-  const isHome = route.params.slug === ''
   const routes = ref([])
   const isOpen = ref(false)
   const onClick = () => {
     isOpen.value = !isOpen.value
   }
-
   const onClose = () => {
     isOpen.value = false
   }
@@ -36,7 +33,6 @@
 </script>
 
 <template>
-  <pre>{{}}</pre>
   <header
     class="absolute w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-transparent overflow-hidden lg:h-[auto] z-50"
     :class="{ 'h-[475px] !bg-nfr-beige lg:bg-transparent' : isOpen }"
@@ -74,6 +70,7 @@
             v-for="(route, index) in routes"
             :key="index"
             class="text-14 font-semibold mb-4 lg:text-[22px] lg:mb-0 lg:mr-8 lg:last:mr-0 lg:text-white"
+            :class="{'lg:text-black' : $route.params.slug !== '' }"
           >
             <NuxtLink :to="route.url">{{ route.name }}</NuxtLink>
           </li>

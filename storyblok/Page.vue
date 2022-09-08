@@ -1,6 +1,5 @@
 <script setup>
   defineProps({ blok: Object })
-  const route = useRoute()
 </script>
 
 <template>
