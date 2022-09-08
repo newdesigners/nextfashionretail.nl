@@ -15,7 +15,7 @@
       class="main-button"
     >
       <span class="">{{ button.label }}</span>
-      <Svg type="arrow" />
+      <SvgImport type="arrow" />
     </a>
     
     <!-- Internal link -->
@@ -25,7 +25,7 @@
       class="main-button"
     >
       <span>{{ button.label }}</span>
-      <Svg type="arrow" />
+      <SvgImport type="arrow" />
     </NuxtLink>
 </template>
 

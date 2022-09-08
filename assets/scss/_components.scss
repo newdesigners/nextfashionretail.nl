@@ -1,5 +1,15 @@
-@layer {
-  .card {
-    @apply bg-nfr-green;
+@layer components {
+  .rich-text {
+    p {
+      @apply text-black leading-[1.8];
+    }
+
+    a, p a {
+      @apply text-nfr-green no-underline hover:underline-offset-4;
+    }
+
+    ol {
+      @apply list-decimal
+    }
   }
 }

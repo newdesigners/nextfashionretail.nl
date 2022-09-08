@@ -46,7 +46,7 @@
           @click="onClose"
           to="/"
         >
-          <Svg
+          <SvgImport
             type="logo"
             class="lg:w-[110px] h-auto header__logo"
             :class="{ 'header__logo--reverse' : $route.params.slug === '' }"

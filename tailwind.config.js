@@ -37,5 +37,8 @@ module.exports = {
         '40': '40px',
       },
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

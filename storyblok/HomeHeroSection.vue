@@ -13,7 +13,7 @@
       <div class="container relative z-[3] pt-[35%] sm:pt-[12%] lg:pt-[12%]">
         <h1 class="text-white font-extrabold text-[33px] lg:text-40 xl:text-[80px] lg:mx-auto lg:text-center xl:w-[85%]">{{ blok.headline }}</h1>
       </div>
-      <Svg
+      <SvgImport
         type="blob-1-stroke"
         class="z-[2] home-hero__blob-figure absolute -translate-x-1/2 -translate-y-1/2 w-[320px] lg:w-[500px] xl:w-[814px] left-0 top-[90%] sm:top-[85%]"
       />
