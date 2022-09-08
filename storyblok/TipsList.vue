@@ -7,7 +7,7 @@
     <div class="container">
       <ul
         v-if="blok.tips"
-        class="flex flex-col gap-y-9"
+        class="flex flex-col gap-y-9 xl:gap-y-14 pb-20 lg:pb-32"
       >
         <li
           v-for="tip in blok.tips"

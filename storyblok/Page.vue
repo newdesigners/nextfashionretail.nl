@@ -11,7 +11,7 @@
       Header original size 142px and large 168px  
       added padding (20px, large 90px) for space between header and main
     -->
-    <div :class="{ 'pt-[162px] lg:pt-[258px]' : route.params.slug !== '' }">
+    <div :class="{ 'pt-[162px] lg:pt-[258px]' : $route.params.slug !== '' }">
       <StoryblokComponent
         v-for="(blok, i) in blok.body"
         :key="blok._uid"

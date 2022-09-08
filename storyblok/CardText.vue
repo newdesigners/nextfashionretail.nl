@@ -4,21 +4,21 @@
 
 <template>
   <section v-editable="blok">
-    <article class="p-8 lg:p-14 bg-white flex flex-col md:flex-row md:items-center md:justify-between">
+    <article class="p-8 lg:p-14 xl:p-20 bg-white flex flex-col md:flex-row md:items-center md:justify-between">
       <div class="text-center md:text-left md:flex md:flex-col-reverse md:md:justify-start md:pb-3 md:w-3/4 lg:w-[70%]">
-        <aside class="mb-5 md:mb-0">
+        <aside class="mb-5 sm:mb-8 md:mb-0">
           <ul class="flex gap-x-1.5 justify-end md:justify-start">
             <li
               v-for="tag in blok.tags"
               :key="tag.uid"
-              class="bg-nfr-green text-[8px] lg:text-[10px] py-0.5 px-3 rounded-full"
+              class="bg-nfr-green text-[8px] lg:text-[10px] lg:px-5 py-0.5 px-3 rounded-full"
             >
               {{ tag.name }}
             </li>
           </ul>
         </aside>
-        <article class="pb-6">
-          <h2 class="font-bold pb-5">{{ blok.title }}</h2>
+        <article class="pb-6 xl:pb-10">
+          <h2 class="font-bold pb-5 xl:pb-8">{{ blok.title }}</h2>
           <p>{{ blok.description}}</p>
         </article>
       </div>

@@ -8,7 +8,7 @@
     class="bg-nfr-beige"
   >
     <div class="container py-14">
-      <article class="sm:text-center pb-10 sm:pb-16 sm:w-[70%] sm:mx-auto">
+      <article class="sm:text-center pb-10 sm:pb-16 sm:w-[70%] sm:mx-auto xl:w-3/5">
         <h2 class="pb-5">{{ blok.title }}</h2>
         <p>{{ blok.description }}</p>
       </article>
