@@ -1,6 +1,6 @@
 <script setup>
-  const route = useRoute()
-  const slug = route.params.slug
+  let { slug } = useRoute().params
+  if (slug.length > 1) slug = slug.join('/')
   const story = await useStoryblok(slug ? slug : 'home', { version: 'draft' })
 </script>
  

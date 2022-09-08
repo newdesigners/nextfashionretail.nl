@@ -1,15 +1,47 @@
 @layer components {
   .rich-text {
-    p {
-      @apply text-black leading-[1.8];
+    p, a {
+      @apply text-black leading-[1.9] text-12 lg:text-16 2xl:text-18;
     }
 
     a, p a {
       @apply text-nfr-green no-underline hover:underline-offset-4;
     }
 
-    ol {
-      @apply list-decimal
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-extrabold text-black;
     }
+
+    h2 {
+      @apply text-20 lg:text-26 xl:text-30;
+    }
+  
+    h3 {
+      @apply text-16 lg:text-20 xl:text-24;
+    }
+
+    h4, h5, h6 {
+      @apply text-14 lg:text-18 xl:text-22;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    img {
+      @apply w-full h-auto;
+    }
+
+    // p:has(> img) {
+    //   @apply  sm:h-0 sm:relative sm:overflow-hidden sm:bg-nfr-beige sm:pt-[42%];
+
+    //   img {
+    //     @apply sm:m-0 sm:absolute top-0 left-0 w-full h-full sm:object-center sm:object-cover;
+    //   }
+    // }
   }
 }
