@@ -6,12 +6,12 @@
 <template>
   <section
     v-editable="blok"
-    class="relative w-full min-h-[591px] lg:h-[105vh] flex h-full bg-cover bg-bottom after:w-full after:h-full after:bg-black after:opacity-30 after:absolute after:left-0 after:top-0 after:z-[1]"
+    class="relative w-full h-[90vh] flex bg-cover bg-bottom after:w-full after:h-full after:bg-black after:opacity-30 after:absolute after:left-0 after:top-0 after:z-[1]"
     :style="imageUrl"
   >
     <div class="relative h-[auto] w-full flex justify-center items-center">
       <div class="container relative z-[3] pt-[35%] sm:pt-[12%] lg:pt-[12%]">
-        <h1 class="text-white font-extrabold text-[33px] lg:text-40 xl:text-[80px] leading-[46px] lg:leading-[1.5] xl:leading-[109px] lg:mx-auto lg:text-center xl:w-[85%]">{{ blok.headline }}</h1>
+        <h1 class="text-white font-extrabold text-[33px] lg:text-40 xl:text-[80px] lg:mx-auto lg:text-center xl:w-[85%]">{{ blok.headline }}</h1>
       </div>
       <Svg
         type="blob-1-stroke"
