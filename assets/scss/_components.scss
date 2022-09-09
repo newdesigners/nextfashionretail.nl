@@ -5,7 +5,7 @@
     }
 
     a, p a {
-      @apply text-nfr-green no-underline hover:underline-offset-4;
+      @apply text-nfr-green no-underline hover:underline hover:underline-offset-4;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -32,8 +32,8 @@
       @apply list-decimal;
     }
 
-    img {
-      @apply w-full h-auto;
+    * > img, img {
+      @apply w-full aspect-square sm:aspect-[2.36] sm:object-center sm:object-cover h-auto;
     }
 
     // p:has(> img) {
