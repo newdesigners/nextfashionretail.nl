@@ -1,20 +1,23 @@
-<script setup>
+<!-- Based all on content inside richtext. Components can't be loaded inside yet -->
+<!-- <script setup>
   const props = defineProps({ blok: Object, isFirst: Boolean })
   const resolvedRichText = computed(() => {
     const storyBlokApi = useStoryblokApi()
     storyBlokApi.setComponentResolver((component, blok) => {
-      switch(component) {
-        case 'GridIcons': {
-          // return `<GridIcons :blok="${JSON.stringify(blok)}"></GridIcons>`
-        }
-        case 'Video' : {
+      // switch(component) {
+      //   case 'GridIcons': {
+      //     // return `<GridIcons :blok="${JSON.stringify(blok)}"></GridIcons>`
+      //   }
+      //   case 'Video' : {
 
-        }
-        default:
-          return `Component ${ component } not found`
-      }
+      //   }
+      //   default:
+      //     return `Component ${ component } not found`
+      // }
+      //Components within a Richtext Editor feature is currently working in Nuxt 3
+      return `<component :blok='${ JSON.stringify(blok) }' is="${ component }"></component>`
     })
-    return (storyBlokApi.richTextResolver.render(props.blok.content))
+    return storyBlokApi.richTextResolver.render(props.blok.content)
   })
 </script>
 
@@ -40,7 +43,7 @@
           </NuxtLink>
         </aside>
         <div v-if="isFirst">
-          <h1 class="pb-3.5">{{ blok.title }}</h1>
+          <h1 class="text-24 lg:text-30 xl:text-40 pb-3.5">{{ blok.title }}</h1>
         </div>
         <div v-else>
           <h2 class="text-24 lg:text-30 xl:text-40 pb-3.5">{{ blok.title }}</h2>
@@ -53,4 +56,4 @@
       </div>
     </article>
   </section>
-</template>
+</template> -->

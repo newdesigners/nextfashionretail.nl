@@ -1,12 +1,14 @@
 <script setup>
   const props = defineProps({ blok: Object })
-  const imageUrl = computed(() => { return { backgroundImage: `url(${ props.blok.background_image.filename })`}});
+  const imageUrl = computed(() => { 
+    return { backgroundImage: `url(${ props.blok.background_image.filename })` } 
+  })
 </script>
 
 <template>
   <section
     v-editable="blok"
-    class="relative w-full h-[90vh] flex bg-cover bg-bottom after:w-full after:h-full after:bg-black after:opacity-30 after:absolute after:left-0 after:top-0 after:z-[1]"
+    class="relative w-full h-[85vh] flex bg-cover bg-bottom after:w-full after:h-full after:bg-black after:opacity-30 after:absolute after:left-0 after:top-0 after:z-[1]"
     :style="imageUrl"
   >
     <div class="relative h-[auto] w-full flex justify-center items-center">
@@ -21,7 +23,7 @@
   </section>
 </template>
  
-<style scoped>
+<style lang="scss">
   .home-hero__blob-figure :deep() svg path {
     @apply stroke-nfr-green;
   }
