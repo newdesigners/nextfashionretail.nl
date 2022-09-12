@@ -1,22 +1,20 @@
 <script setup>
   const props = defineProps({ blok: Object, isFirst: Boolean })
-
   const resolvedRichText = computed(() => {
     const storyBlokApi = useStoryblokApi()
     storyBlokApi.setComponentResolver((component, blok) => {
       switch(component) {
         case 'GridIcons': {
-          return `<GridIconsComponent />`
+          // return `<GridIcons :blok="${JSON.stringify(blok)}"></GridIcons>`
         }
         case 'Video' : {
 
         }
         default:
-          return `Component ${ component } is niet gevonden`
+          return `Component ${ component } not found`
       }
     })
-
-    return storyBlokApi.richTextResolver.render(props.blok.content);
+    return (storyBlokApi.richTextResolver.render(props.blok.content))
   })
 </script>
 

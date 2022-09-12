@@ -5,7 +5,7 @@
 <template>
   <aside>
     <ul>
-      <h1>Hello from component</h1>
+      <p>Hello from GridIcons in components</p>
     </ul>
   </aside>
 </template>

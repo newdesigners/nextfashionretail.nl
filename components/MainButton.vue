@@ -1,7 +1,5 @@
 <script setup>
-  defineProps({
-    button: Object
-  })
+  defineProps({ button: Object, type: String })
 </script>
 
 <template>
@@ -13,19 +11,27 @@
       target="_blank"
       rel="noopener noreferrer"
       class="main-button"
+      :class="`main-button--${ type }`" 
     >
       <span class="">{{ button.label }}</span>
-      <SvgImport type="arrow" />
+      <SvgImport
+        :class="type"
+        type="arrow"
+      />
     </a>
-    
+
     <!-- Internal link -->
     <NuxtLink
       v-if="button.link.linktype === 'story'"
-      :to="button.link.cached_url"
+      :to="`/${ button.link.cached_url}`"
       class="main-button"
+      :class="`main-button--${ type }`" 
     >
       <span>{{ button.label }}</span>
-      <SvgImport type="arrow" />
+      <SvgImport
+        :class="type"
+        type="arrow"
+        />
     </NuxtLink>
 </template>
 
@@ -38,8 +44,19 @@
   }
 
   &:hover {
-    @apply text-black bg-nfr-green-light;
+    @apply text-black bg-nfr-green-light no-underline;
+  }
 
+  &--big {
+    @apply text-14 py-1.5 px-7 lg:py-2.5 lg:text-20 lg:px-10 xl:text-22 xl:px-12;
+
+    span {
+      @apply pr-2 lg:pr-4;
+    }
+  }
+
+  .big svg {
+    @apply w-[16px] lg:w-[26px]
   }
 }
 </style>
