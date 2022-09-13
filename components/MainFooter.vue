@@ -5,35 +5,35 @@
   routes.value = [
     {
       name: 'Materialen',
-      url: '/materialen',
+      url: '/',
     },
     {
       name: 'Care',
-      url: '/care',
+      url: '/duurzaamheid-care',
     },
     {
       name: 'Makers',
-      url: '/makers',
+      url: '/duurzaamheid-makers',
     },
     {
       name: 'Ons verhaal',
-      url: '/ons-verhaal',
+      url: '/duurzaamheid-ons-verhaal',
     },
     {
       name: 'Over ons',
-      url: '/over-ons',
+      url: '/duurzaamheid-over-ons',
     },
   ]
 </script>
 
 <template>
-  <footer class=" bg-black py-11 lg:py-36">
+  <footer class=" bg-black py-11 lg:py-14">
     <div class="container">
-      <ul class="flex flex-col gap-5 lg:flex-row lg:justify-around">
+      <ul class="flex flex-col gap-5 lg:flex-row justify-around w-4/5 mx-auto">
         <li
           v-for="(route, index) in routes"
           :key="index"
-          class="text-white text-[14px] lg:text-[35px]"
+          class="text-white text-14 lg:text-18 xl:text-20"
         >
           <NuxtLink :to="route.url">{{ route.name }}</NuxtLink>
         </li>
