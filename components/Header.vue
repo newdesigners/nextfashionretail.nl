@@ -11,23 +11,23 @@
   routes.value = [
     {
       name: 'Materialen',
-      url: '/materialen',
+      url: '/',
     },
     {
       name: 'Care',
-      url: '/care',
+      url: '/duurzaamheid-care',
     },
     {
       name: 'Makers',
-      url: '/makers',
+      url: '/duurzaamheid-makers',
     },
     {
       name: 'Ons verhaal',
-      url: '/ons-verhaal',
+      url: '/duurzaamheid-ons-verhaal',
     },
     {
       name: 'Over ons',
-      url: '/over-ons',
+      url: '/duurzaamheid-over-ons',
     },
   ]
 </script>
@@ -82,7 +82,7 @@
 
 <style lang="scss">
 a.router-link-active {
-  @apply text-nfr-green underline;
+  @apply text-nfr-green;
 }
 
 .header {
