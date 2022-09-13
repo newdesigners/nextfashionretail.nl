@@ -1,5 +1,6 @@
 <script setup>
-  defineProps({ blok: Object })
+  const props = defineProps({ blok: Object })
+  const isLast = (i) => i === props.blok.body.length - 1;
 </script>
 
 <template>
@@ -17,6 +18,7 @@
         :key="blok._uid"
         :blok="blok"
         :is-first="i === 0"
+        :is-last="isLast(i)"
       />
     </div>
   </div>

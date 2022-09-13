@@ -6,8 +6,18 @@ export default defineNuxtConfig({
     '~/assets/scss/fonts.scss',
     '~/assets/scss/hamburger.scss',
   ],
+  components: {
+    global: true,
+    dirs: ['~/components', '~/storyblok'],
+  },
   modules: [
-    ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_SPACE_TOKEN }],
+    [
+      '@storyblok/nuxt',
+      { 
+        accessToken: process.env.STORYBLOK_SPACE_TOKEN,
+        region: 'eu'
+      },
+    ],
     '@nuxtjs/tailwindcss',
   ],
   tailwindcss: {

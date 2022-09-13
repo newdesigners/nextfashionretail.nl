@@ -35,6 +35,28 @@
     >
       <path d="M11.283 3.255a.4.4 0 0 0 0-.566L8.737.144a.4.4 0 0 0-.565.565l2.262 2.263-2.262 2.263a.4.4 0 0 0 .565.566l2.546-2.546ZM0 3.372h11v-.8H0v.8Z" fill="#000"/>
     </svg>
+    <svg
+      v-if="type === 'x'"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </svg>
+    <svg
+      v-if="type === 'play'"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 494.148 494.148"
+      style="enable-background:new 0 0 494.148 494.148" xml:space="preserve"
+    >
+      <path d="M405.284 201.188 130.804 13.28C118.128 4.596 105.356 0 94.74 0 74.216 0 61.52 16.472 61.52 44.044v406.124c0 27.54 12.68 43.98 33.156 43.98 10.632 0 23.2-4.6 35.904-13.308l274.608-187.904c17.66-12.104 27.44-28.392 27.44-45.884.004-17.48-9.664-33.764-27.344-45.864z"/>
+    </svg>
   </figure>
 </template>
 
