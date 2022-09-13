@@ -28,10 +28,10 @@
         </NuxtLink>
       </aside>
       <div v-if="isFirst">
-        <h1 class="text-24 lg:text-30 xl:text-40 pb-3.5">{{ blok.title }}</h1>
+        <h1 class="text-24 lg:text-30 xl:text-40 xl:pb-3.5">{{ blok.title }}</h1>
       </div>
       <div v-else>
-        <h2 class="text-24 lg:text-30 xl:text-40 pb-3.5">{{ blok.title }}</h2>
+        <h2 class="text-24 lg:text-30 xl:text-40 xl:pb-3.5">{{ blok.title }}</h2>
       </div>
       <component
         v-for="blok in blok.content"

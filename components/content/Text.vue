@@ -5,7 +5,7 @@
 
 <template>
   <article
-    class="py-2 rich-text prose-sm md:prose-lg lg:prose-xl md:max-w-none"
+    class="rich-text prose-sm md:prose-lg lg:prose-xl md:max-w-none"
     v-html="articleContent"
   >
   </article>

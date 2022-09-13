@@ -24,7 +24,7 @@
 </template>
  
 <style lang="scss">
-  .home-hero__blob-figure :deep() svg path {
+  .home-hero__blob-figure svg path {
     @apply stroke-nfr-green;
   }
 </style>
