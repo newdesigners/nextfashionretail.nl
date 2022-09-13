@@ -8,7 +8,7 @@
     class="container mb-10 lg:mb-28"
   >
     <article
-      :class="[`bg-${ blok.section_background_color }`, { 'p-8 lg:p-12 xl:p-24' : blok.container_width === 'small' }]" 
+      :class="[`bg-${ blok.section_background_color }`, { 'p-10 py-14 md:p-14 xl:p-24' : blok.container_width === 'small' }]" 
     >
       <aside
         v-if="blok.close_button"
