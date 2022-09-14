@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <section v-editable="blok">
+  <section
+    v-editable="blok"
+    :class="{ 'pt-6 lg:pt-16': isFirst }"
+  >
     <div class="container pb-16 sm:text-center sm:w-[70%] sm:mx-auto xl:w-3/5">
       <div class="pb-2">
         <div v-if=isFirst>
