@@ -18,13 +18,13 @@
           </ul>
         </aside>
         <article class="pb-6 xl:pb-10">
-          <h2 class="font-bold pb-5 xl:pb-8">{{ blok.title }}</h2>
+          <h2 class="font-bold md:text-16 lg:text-18 xl:text-24 pb-5 xl:pb-8">{{ blok.title }}</h2>
           <p>{{ blok.description}}</p>
         </article>
       </div>
       <figure
         v-if="blok.image.filename"
-        class="w-[66px] h-auto mx-auto md:mx-0 md:max-w-[250px] md:w-1/6"
+        class="w-[66px] h-auto mx-auto md:mx-0 md:max-w-[250px] md:w-[10%]"
       >
           <img
             class="w-full h-auto"

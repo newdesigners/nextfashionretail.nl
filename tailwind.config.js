@@ -11,7 +11,6 @@ module.exports = {
       },
       colors: {
         'nfr-beige': '#FFF1E5',
-        'nfr-green' : '#00E676',
         'nfr-green' : {
           DEFAULT: '#00E676',
           light: '#4AEB9D',

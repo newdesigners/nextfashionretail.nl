@@ -69,7 +69,7 @@
           <li 
             v-for="(route, index) in routes"
             :key="index"
-            class="text-14 font-semibold mb-4 lg:text-[22px] lg:mb-0 lg:mr-8 lg:last:mr-0 lg:text-white"
+            class="text-14 font-semibold mb-4 lg:text-20 lg:mb-0 lg:mr-8 lg:last:mr-0 lg:text-white"
             :class="{'lg:text-black' : $route.params.slug !== '' }"
           >
             <NuxtLink :to="route.url">{{ route.name }}</NuxtLink>
