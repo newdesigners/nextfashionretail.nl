@@ -24,4 +24,7 @@ export default defineNuxtConfig({
     cssPath: "~/assets/scss/tailwind.scss",
   },
   buildModules: ["@nuxtjs/svg"],
+  build: {
+    transpile: ['swiper']
+  },
 })

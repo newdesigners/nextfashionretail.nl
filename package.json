@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/tailwindcss": "^5.3.2",
     "@storyblok/nuxt": "^4.2.0",
-    "hamburgers": "^1.2.1"
+    "hamburgers": "^1.2.1",
+    "swiper": "^8.4.0"
   }
 }
