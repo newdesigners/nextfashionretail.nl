@@ -26,11 +26,11 @@
         v-if="blok.image.filename"
         class="w-[66px] h-auto mx-auto md:mx-0 md:max-w-[250px] md:w-[10%]"
       >
-          <img
-            class="w-full h-auto"
-            :src="blok.image.filename"
-            alt="blok.image.alt"
-          />
+        <img
+          class="w-full h-auto"
+          :src="blok.image.filename"
+          alt="blok.image.alt"
+        />
       </figure>
     </article>
   </section>
