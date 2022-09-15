@@ -3,7 +3,12 @@
   import 'swiper/css'
 
   defineProps({ blok: Object })
-
+  const onSwiper = (swiper) =>  {
+    console.log(swiper);
+  }
+  const onSlideChange = () => {
+    console.log('slide change');
+  }
 </script>
 
 <template>
@@ -17,23 +22,26 @@
       <article class="container">
         <h2 class="pb-10 lg:pb-14 font-bold lg:text-30">{{ blok.title }}</h2>
       </article>
-      <aside>
+      <aside class="w-full">
         <swiper
-          :slidesPerView="4"
-          :spaceBetween="30"
+          :slidesPerView="1.5"
+          :spaceBetween="5"
+          :loop="true"
           :centeredSlides="true"
+          :slideToClickedSlide="true"
+          :breakpoints="{
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
         >
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 1</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 2</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
-          <swiper-slide><div class="w=[245px] h-[200px] bg-nfr-beige">Slide 3</div></swiper-slide>
+          <swiper-slide
+            v-for="c in blok.carousel"
+            :key="c._uid"
+          >
+            <StoryblokComponent :blok="c" />
+          </swiper-slide>
         </swiper>
       </aside>
   </div>
