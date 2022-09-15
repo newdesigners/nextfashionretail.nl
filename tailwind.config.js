@@ -7,6 +7,8 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: '46px',
+          xl: '8rem',
+          '2xl': '10rem',
         },
       },
       colors: {
