@@ -3,12 +3,6 @@
   import 'swiper/css'
 
   defineProps({ blok: Object })
-  const onSwiper = (swiper) =>  {
-    console.log(swiper);
-  }
-  const onSlideChange = () => {
-    console.log('slide change');
-  }
 </script>
 
 <template>
@@ -24,17 +18,12 @@
       </article>
       <aside class="w-full">
         <swiper
-          :slidesPerView="1.5"
-          :spaceBetween="5"
+          :slidesPerView="'auto'"
+          :spaceBetween="20"
           :loop="true"
           :centeredSlides="true"
+          :slidesPerGroup="1"
           :slideToClickedSlide="true"
-          :breakpoints="{
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-          }"
-          @swiper="onSwiper"
-          @slideChange="onSlideChange"
         >
           <swiper-slide
             v-for="c in blok.carousel"
@@ -47,3 +36,9 @@
   </div>
   </section>
 </template>
+
+<style>
+  .swiper-slide {
+    @apply w-[65%] sm:w-[25%] xl:w-[20%];
+  }
+</style>
