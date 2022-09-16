@@ -1,6 +1,8 @@
 <script setup>
   const routes = ref([])
   const isOpen = ref(false)
+  const isScrolled = ref(false)
+
   const onClick = () => {
     isOpen.value = !isOpen.value
   }
@@ -30,17 +32,28 @@
       url: '/duurzaamheid-over-ons',
     },
   ]
+
+  onMounted(() => {
+    window.addEventListener('scroll', e => {
+      console.log(window.scrollY, isScrolled.value)
+      if (window.scrollY > 25) {
+        isScrolled.value = true
+      } else {
+        isScrolled.value = false
+      }
+    })
+  })
 </script>
 
 <template>
   <header
-    class="absolute w-full delay-100 transition-height duration-300 ease-in-out h-[142px] bg-transparent overflow-hidden lg:h-[auto] z-50"
-    :class="{ 'h-[475px] !bg-nfr-beige lg:bg-transparent' : isOpen }"
+    class="fixed top-0 w-full delay-100 transition-height duration-300 ease-in-out h-[110px] bg-transparent overflow-hidden lg:h-[auto] z-50"
+    :class="[{ 'h-[380px] !bg-nfr-beige lg:bg-transparent' : isOpen }, { 'header--scrolled' : isScrolled }]"
   >
     <div class="container lg:flex justify-between items-center">
       <div
-        class="flex justify-between items-center py-10 lg:py-12"
-        :class="{ 'header--open' : isOpen}"
+        class="flex justify-between items-center py-6 lg:py-7"
+        :class="{ 'header--open' : isOpen }"
       >
         <NuxtLink
           @click="onClose"
@@ -48,7 +61,7 @@
         >
           <SvgImport
             type="logo"
-            class="w-[70px] lg:w-[110px] h-auto header__logo"
+            class="header__logo w-[70px] lg:w-[80px] h-auto"
             :class="{ 'header__logo--reverse' : $route.params.slug === '' }"
           />
         </NuxtLink>
@@ -69,7 +82,7 @@
           <li 
             v-for="(route, index) in routes"
             :key="index"
-            class="text-14 font-semibold mb-4 lg:text-20 lg:mb-0 lg:mr-8 lg:last:mr-0 lg:text-white"
+            class="transition-colors delay-150 ease-out duration-300 text-14 font-semibold mb-4 lg:text-18 lg:mb-0 lg:mr-8 xl:mr-9 lg:last:mr-0 lg:text-white"
             :class="{'lg:text-black' : $route.params.slug !== '' }"
           >
             <NuxtLink :to="route.url">{{ route.name }}</NuxtLink>
@@ -87,8 +100,10 @@ a.router-link-active {
 
 .header {
   &__logo {
-    svg path {
-      @apply fill-black;
+    svg {
+      path {
+        @apply transition-all ease-out fill-black lg:delay-150 duration-300;
+      }
     }
 
     &--reverse {
@@ -97,13 +112,27 @@ a.router-link-active {
       }
     }
   }
-}
 
-.header {
   &--open {
     .header__logo {
       svg path {
         @apply fill-black;
+      }
+    }
+  }
+  
+  &--scrolled {
+    @apply bg-nfr-beige;
+    
+    li {
+        @apply lg:text-black;
+     }
+
+    .header {
+      &__logo {
+        svg path {
+          @apply fill-black;
+        }
       }
     }
   }
