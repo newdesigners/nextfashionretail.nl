@@ -9,21 +9,21 @@
   >
     <div class="container py-6 lg:py-16 xl:py-20">
       <article
-        :class="[`bg-${ blok.section_background_color }`, { 'p-10 py-14 md:p-14 xl:p-24' : blok.container_width === 'small' }]" 
+        :class="[`bg-${ blok.section_background_color }`, { 'p-9 md:p-14 xl:p-24' : blok.container_width === 'small' }]" 
       >
         <aside
           v-if="blok.close_button"
           class="text-right pb-3"
         >
           <NuxtLink to="/" class="inline-block hover:text-black">
-            <figure class="relative w-[31px] lg:w-[55px] inline-block">
+            <figure class="relative w-[46px] md:w-[56px] lg:w-[60px] inline-block">
             <img class="w-full h-auto"
               src="~/assets/images/svg/blob-1.svg"
               alt="blob illustratie"
             />
             <SvgImport
               type="x"
-              class="w-[16px] lg:w-[28px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              class="w-1/2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
             </figure>
           </NuxtLink>

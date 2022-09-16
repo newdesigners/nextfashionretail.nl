@@ -27,9 +27,9 @@
 </script>
 
 <template>
-  <footer class=" bg-black py-11 lg:py-14">
+  <footer class="bg-black py-11 lg:py-14">
     <div class="container">
-      <ul class="flex flex-col gap-5 lg:flex-row justify-around w-4/5 mx-auto">
+      <ul class="flex flex-col gap-5 lg:flex-row justify-around lg:w-4/5 mx-auto">
         <li
           v-for="(route, index) in routes"
           :key="index"
