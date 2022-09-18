@@ -9,7 +9,7 @@
   >
     <div
       class="carousel__background w-full h-full bg-cover bg-center after:w-full after:h-full after:bg-black after:opacity-40 after:absolute after:left-0 after:top-0 after:z-[1]"
-      :style="{ backgroundImage: `url('${ blok.image.filename }')` }"
+      :style="{ backgroundImage: `url('${ blok.image.filename }/m/525x0/filters:quality(80)')` }"
     >
     </div>
     <section class="absolute top-0 left-0 p-5 w-full z-10 h-full flex flex-col justify-between">

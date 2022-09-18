@@ -14,7 +14,7 @@
       >
         <img
           class="w-full h-auto"
-          :src="blok.image.filename"
+          :src="`${ blok.image.filename }/m/920x0/filters:quality(80)`"
           :alt="blok.image.alt"
         >
       </figure>

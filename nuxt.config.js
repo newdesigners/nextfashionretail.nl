@@ -26,4 +26,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['swiper']
   },
+  publicRuntimeConfig: {
+    HOST_NAME: process.env.HOST_NAME
+  },
 })

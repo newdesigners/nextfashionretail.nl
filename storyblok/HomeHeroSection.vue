@@ -1,7 +1,7 @@
 <script setup>
   const props = defineProps({ blok: Object })
   const imageUrl = computed(() => { 
-    return { backgroundImage: `url(${ props.blok.background_image.filename })` } 
+    return { backgroundImage: `url('${ props.blok.background_image.filename }/m/1635x0/filters:quality(80)')` } 
   })
 </script>
 
