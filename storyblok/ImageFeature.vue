@@ -5,7 +5,7 @@
 <template>
   <section 
     v-editable="blok"
-    class="py-16 xl:py-44"
+    class="py-16 sm:py-24 lg:py-32 xl:py-44"
   >
     <div class="container items-center flex flex-col sm:flex-row lg:w-5/6 xl:w-[85%] gap-[70px] lg:gap-0 lg:justify-between">
       <figure 
