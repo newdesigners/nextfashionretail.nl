@@ -3,7 +3,7 @@
   if (slug.length > 1) slug = slug.join('/')
   const config = useRuntimeConfig()
   const story = await useStoryblok(slug ? slug : 'home', { version: 'draft' })
-  const openGraphImage = 'https://a.storyblok.com/f/172899/1197x598/7456a406fd/open-graph-image.png'
+  const openGraphImage = 'https://a.storyblok.com/f/172899/1200x630/498416cf68/open-graph-sharing-image.jpg'
   const title = story.value.name ? story.value.name : 'Home'
   const description = 'Next Fashion Retail helpt jou met duurzamer worden'
 
@@ -27,15 +27,39 @@
         content: '#fff1e5'
       },
       {
-        name: 'og:image',
+        property: 'og:locale',
+        content: 'nl_NL'
+      },
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        property: 'og:site_name',
+        content: 'Next Fashion Retail'
+      },
+      {
+        property: 'og:image',
         content: openGraphImage
       },
       {
-        name: 'og:description',
+        property: 'og:image:width',
+        content: '1200'
+      },
+      {
+        property: 'og:image:height',
+        content: '630'
+      },
+      {
+        property: 'og:title',
+        content: `Next Fashion Retail | ${ title }`
+      },
+      {
+        property: 'og:description',
         content: description
       },
       {
-        name: 'og:url',
+        property: 'og:url',
         content: config.HOST_NAME + '/' + slug
       },
       {
