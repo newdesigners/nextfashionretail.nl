@@ -1,19 +1,17 @@
 <script setup>
   defineProps({ blok: Object })
 
-  let video = ref(null)
+  const video = ref(null)
   const open = () => {
     if(video.value.requestFullscreen) {
-      video.value.requestFullscreen();
-      video.value.play();
+      video.value.requestFullscreen()
+      video.value.play()
     } else if(video.value.webkitRequestFullscreen) {
-      video.value.webkitRequestFullscreen();
-      video.value.play();
+      video.value.webkitRequestFullscreen()
+      video.value.play()
     } else if(video.value.msRequestFullscreen) {
-      video.value.msRequestFullscreen();
-      video.value.play();
-    } else {
-      console.log('here')
+      video.value.msRequestFullscreen()
+      video.value.play()
     }
   }
 </script>

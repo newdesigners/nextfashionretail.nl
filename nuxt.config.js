@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   ],
   components: {
     global: true,
-    dirs: ['~/components', '~/storyblok'],
+    dirs: ['~/components']
   },
   modules: [
     [
@@ -23,8 +23,10 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/scss/tailwind.scss",
   },
-  buildModules: ["@nuxtjs/svg"],
   build: {
     transpile: ['swiper']
+  },
+  publicRuntimeConfig: {
+    HOST_NAME: process.env.HOST_NAME
   },
 })

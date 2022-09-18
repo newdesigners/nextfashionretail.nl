@@ -2,13 +2,8 @@
   const routes = ref([])
   const isOpen = ref(false)
   const isScrolled = ref(false)
-
-  const onClick = () => {
-    isOpen.value = !isOpen.value
-  }
-  const onClose = () => {
-    isOpen.value = false
-  }
+  const onClick = () => { isOpen.value = !isOpen.value }
+  const onClose = () => { isOpen.value = false }
 
   routes.value = [
     {
@@ -35,7 +30,6 @@
 
   onMounted(() => {
     window.addEventListener('scroll', e => {
-      console.log(window.scrollY, isScrolled.value)
       if (window.scrollY > 25) {
         isScrolled.value = true
       } else {
