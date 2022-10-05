@@ -14,10 +14,10 @@
       name: 'Makers',
       url: '/duurzaamheid-makers',
     },
-    {
-      name: 'Ons verhaal',
-      url: '/duurzaamheid-ons-verhaal',
-    },
+    // {
+    //   name: 'Ons verhaal',
+    //   url: '/duurzaamheid-ons-verhaal',
+    // },
     {
       name: 'Over ons',
       url: '/duurzaamheid-over-ons',
