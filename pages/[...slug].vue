@@ -6,7 +6,7 @@
   const openGraphImage = 'https://a.storyblok.com/f/172899/1200x630/498416cf68/open-graph-sharing-image.jpg'
   const title = story.value.name ? story.value.name : 'Home'
   const description = 'Next Fashion Retail helpt jou met duurzamer worden'
-  
+
   useHead({
     titleTemplate: 'Next Fashion Retail | %s',
     title,
@@ -88,7 +88,7 @@
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#00e676' },
     ],
     script: [
-      { defer:true, 'data-domain':"nextfashionretail.nl", src:"https://plausible.io/js/plausible.js" }
+      { defer: true, 'data-domain': "nextfashionretail.nl", src: "https://plausible.io/js/plausible.js" }
     ]
   })
 </script>
