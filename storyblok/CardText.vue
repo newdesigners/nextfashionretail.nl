@@ -1,5 +1,6 @@
 <script setup>
-  defineProps({ blok: Object })
+  const props = defineProps({ blok: Object })
+  const articleContent = computed(() => renderRichText(props.blok.description))
 </script>
 
 <template>
@@ -19,7 +20,11 @@
         </aside>
         <article class="pb-6 xl:pb-10">
           <h2 class="font-bold md:text-16 lg:text-18 xl:text-24 pb-5 xl:pb-8">{{ blok.title }}</h2>
-          <p>{{ blok.description}}</p>
+          <div
+            class="rich-text prose-sm md:prose-lg lg:prose-xl md:max-w-none"
+            v-html="articleContent"
+          >
+          </div>
         </article>
       </div>
       <figure

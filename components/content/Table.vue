@@ -4,7 +4,7 @@
 
 <template>
   <aside v-if="blok.table.length !== 0" class="py-4">
-    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 lg:w-11/12 mx-auto">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 lg:w-[94%] mx-auto">
       <li
         v-for="item in blok.table"
         :key="item._uid"

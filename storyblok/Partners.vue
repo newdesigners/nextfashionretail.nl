@@ -5,9 +5,8 @@
 <template>
   <section
     v-editable="blok"
-    class="py-14 lg:py-20"
+    class="py-14 pt-0 lg:py-20 lg:pt-0"
     :class="`bg-${ blok.background_color }`"
-
   >
     <div class="container">
       <h2 class="pb-10 lg:pb-14 font-bold lg:text-30">{{ blok.title }}</h2>
@@ -24,6 +23,6 @@
           </li>
         </ul>
       </aside>
-  </div>
+    </div>
   </section>
 </template>
