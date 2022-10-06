@@ -87,6 +87,9 @@
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#00e676' },
     ],
+    script: [
+      { defer: true, 'data-domain': "nextfashionretail.nl", src: "https://plausible.io/js/plausible.js" }
+    ]
   })
 </script>
  
