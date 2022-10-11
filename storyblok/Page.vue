@@ -8,7 +8,7 @@
     v-editable="blok"
     :class="blok.background_color ? blok.background_color : 'bg-white'"
   >
-    <div :class="{ 'pt-[110px] lg:pt-[110px]' : true }">
+    <div class="pt-[110px]">
       <StoryblokComponent
         v-for="(blok, i) in blok.body"
         :key="blok._uid"

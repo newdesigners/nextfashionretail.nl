@@ -15,7 +15,10 @@
           v-if="blok.close_button"
           class="text-right pb-3"
         >
-          <NuxtLink to="/" class="inline-block hover:text-black">
+          <NuxtLink
+            :to="blok.close_button && blok.close_button_link_to ? `/${ blok.close_button_link_to.cached_url }` : '/'" 
+            class="inline-block hover:text-black"
+          >
             <figure class="relative w-[46px] md:w-[56px] lg:w-[60px] inline-block">
             <img class="w-full h-auto"
               src="~/assets/images/svg/blob-1.svg"
