@@ -4,7 +4,6 @@
   const isScrolled = ref(false)
   const onClick = () => { isOpen.value = !isOpen.value }
   const onClose = () => { isOpen.value = false }
-  let { slug } = useRoute().params
 
   routes.value = [
     {
