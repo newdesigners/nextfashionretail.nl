@@ -8,10 +8,6 @@
     v-editable="blok"
     :class="blok.background_color ? blok.background_color : 'bg-white'"
   >
-    <!--
-      Header original size 142px and large 168px  
-      added padding (20px, large 90px) for space between header and main
-    -->
     <div :class="{ 'pt-[110px] lg:pt-[110px]' : true }">
       <StoryblokComponent
         v-for="(blok, i) in blok.body"
