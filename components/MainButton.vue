@@ -39,6 +39,10 @@
 .main-button {
   @apply rounded-full px-3 py-0.5 lg:px-4 lg:py-1 xl:px-5 bg-nfr-green text-[12px] lg:text-[14px] font-medium inline-flex items-center;
   
+  a.router-link-active {
+    @apply text-nfr-green;
+  }
+  
   span {
     @apply flex-1 pr-1.5 lg:pr-2;
   }
