@@ -13,7 +13,7 @@
       <MainButton
         v-if="blok.button_url"
         :button="{ label: blok.button_label, link: blok.button_url }"
-        type="big" 
+        type="big"
       />
     </div>
   </section>

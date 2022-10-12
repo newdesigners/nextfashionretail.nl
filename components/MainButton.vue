@@ -11,7 +11,7 @@
       target="_blank"
       rel="noopener noreferrer"
       class="main-button"
-      :class="`main-button--${ type }`" 
+      :class="type ? `main-button--${ type }` : ''" 
     >
       <span class="">{{ button.label }}</span>
       <SvgImport
@@ -25,7 +25,7 @@
       v-if="button.link.linktype === 'story'"
       :to="`/${ button.link.cached_url}`"
       class="main-button"
-      :class="`main-button--${ type }`" 
+      :class="type ? `main-button--${ type }` : ''"  
     >
       <span>{{ button.label }}</span>
       <SvgImport
@@ -39,12 +39,20 @@
 .main-button {
   @apply rounded-full px-3 py-0.5 lg:px-4 lg:py-1 xl:px-5 bg-nfr-green text-[12px] lg:text-[14px] font-medium inline-flex items-center;
   
+  a.router-link-active {
+    @apply text-nfr-green;
+  }
+  
   span {
-    @apply pr-1.5 lg:pr-2;
+    @apply flex-1 pr-1.5 lg:pr-2;
   }
 
   &:hover {
     @apply text-black bg-nfr-green-light no-underline;
+  }
+
+  figure {
+    @apply w-4;
   }
 
   &--big {
@@ -53,10 +61,10 @@
     span {
       @apply pr-2 lg:pr-4;
     }
-  }
 
-  .big svg {
-    @apply w-[16px] lg:w-[26px]
+    figure {
+      @apply w-[16px] lg:w-[26px];
+    }
   }
 }
 </style>

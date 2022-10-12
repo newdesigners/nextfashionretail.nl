@@ -1,4 +1,4 @@
-<!-- Based all on content inside richtext. Components can't be loaded inside yet -->
+<!-- Post is based on all content inside a richtext editor. Components can't be loaded inside yet due to an issue with compatibility Nuxt 3.0 and Storyblok -->
 <!-- <script setup>
   const props = defineProps({ blok: Object, isFirst: Boolean })
   const resolvedRichText = computed(() => {
