@@ -6,7 +6,10 @@
 <template>
   <section v-editable="blok">
     <article class="p-8 lg:p-14 xl:p-20 bg-white flex flex-col md:flex-row md:items-center md:justify-between md:flex-wrap">
-      <div class="text-center md:text-left md:flex md:flex-col md:md:justify-start pb-3 md:w-3/4 lg:w-[70%]">
+      <div
+        class="text-center md:text-left md:flex md:flex-col md:md:justify-start pb-3 "
+        :class="{ 'md:w-3/4 lg:w-[70%]' : blok.content.image.filename }" 
+      >
         <aside class="mb-5 sm:mb-8">
           <ul class="flex gap-x-1.5 lg:gap-x-3 justify-end md:justify-start">
             <li
