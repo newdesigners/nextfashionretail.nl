@@ -24,7 +24,7 @@
       </ul> -->
       <ul
         v-if="tips"
-        class="flex flex-col gap-y-9 xl:gap-y-14 pb-20 lg:pb-32"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-y-8 sm:gap-x-10 md:gap-x-20 md:gap-y-10 lg:gap-x-28 lg:grid-cols-[minmax(0,_46%)_minmax(0,_46%)] pb-20 lg:pb-32"
       >
         <li
           v-for="tip in tips"
