@@ -1,4 +1,6 @@
 <script setup>
+import Text from '../components/content/Text.vue';
+
   defineProps({ blok: Object })
 </script>
 
@@ -20,7 +22,7 @@
       </figure>
       <article class="flex-1 lg:flex-initial lg:w-1/2 xl:w-[45%]">
         <h2 class="pb-6 sm:pb-4 xl:pb-3.5">{{ blok.title }}</h2>
-        <p>{{ blok.text }}</p>
+        <Text :blok="blok"/>
       </article>
     </div>
   </section>
