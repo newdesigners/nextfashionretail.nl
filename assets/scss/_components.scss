@@ -36,6 +36,20 @@
       @apply w-full aspect-square sm:aspect-[2.36] sm:object-center sm:object-cover h-auto;
     }
 
+    p{
+      @apply my-0
+    }
+    ul{
+      @apply mt-0 mb-10
+    }
+      li {
+        @apply my-0;
+        p{
+          @apply my-0
+        }
+      }
+    
+
     // p:has(> img) {
     //   @apply  sm:h-0 sm:relative sm:overflow-hidden sm:bg-nfr-beige sm:pt-[42%];
 

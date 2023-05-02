@@ -31,7 +31,10 @@ export default {
       } else if(video.msRequestFullscreen) {
         video.msRequestFullscreen();
         video.play();
-      }
+      } else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+        video.play();
+  }
     },
   },
 };
@@ -46,8 +49,8 @@ export default {
         </div>
     </div>
 
-    <div class="h-[215px] md:h-[400px] lg:h-[737px] w-full hover:cursor-pointer" @click="open">
-        <video class="w-full h-full object-cover" ref="video" v-if="blok?.src" :src="blok.src.filename" preload="metadata" type='video/mp4' playsinline></video>
+    <div class="h-[215px] lg:h-[600px] w-full hover:cursor-pointer" @click="open">
+        <video class="w-full h-full object-cover" ref="video" v-if="blok?.src" :src="blok.src.filename + '#t=0.001'" preload="metadata" type='video/mp4' ></video>
     </div>
   </div>
 </template>
