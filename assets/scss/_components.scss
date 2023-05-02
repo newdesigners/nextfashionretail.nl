@@ -1,7 +1,7 @@
 @layer components {
   .rich-text {
     p, a {
-      @apply text-black leading-[1.9] text-12 lg:text-16 2xl:text-18 lg:my-6;
+      @apply text-black leading-[12px] md:leading-[32px] text-8 md:text-12 lg:text-16 2xl:text-18 lg:my-6;
     }
 
     a, p a {
@@ -40,7 +40,7 @@
       @apply my-0
     }
     ul{
-      @apply mt-0 mb-10
+      @apply mt-0 md:mb-10
     }
       li {
         @apply my-0;
