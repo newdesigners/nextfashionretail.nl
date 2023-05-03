@@ -54,14 +54,14 @@
   }
 
   &--big {
-    @apply rounded-full px-3 py-0.5 md:px-8 md:py-4 xl:px-10 bg-nfr-green text-[8px] md:text-[12px] lg:text-[20px] xl:text-[25px] font-medium inline-flex items-center;
+    @apply rounded-full px-3 py-0.5 md:px-8 md:py-2 xl:px-14 bg-nfr-green text-[8px] md:text-[12px] lg:text-[20px] xl:text-[24px] font-medium inline-flex items-center;
 
     span {
       @apply pr-2 lg:pr-4;
     }
 
     figure {
-      @apply w-[10px] md:w-[20px] lg:w-[40px] transform rotate-90;
+      @apply w-[10px] md:w-[20px] lg:w-[33px] transform rotate-90;
     }
     &:hover {
     @apply text-black bg-nfr-green-light no-underline;
