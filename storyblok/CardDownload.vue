@@ -17,13 +17,21 @@ const cardContent = computed(() => renderRichText(props.blok.description))
         >
       </article>
 
-      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-16">
+      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
         <DownloadButton :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig }" />
       </aside>
 
-      <aside v-else class="flex justify-end mt-4 md:mt-16 items-end">
+      <aside v-else class="flex justify-end mt-4 md:mt-12 items-end">
         <DownloadButton :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig}"/>
       </aside>
+
+      <component
+          v-for="blok in props.blok.ButtonsWithText"
+          :key="blok._uid"
+          :blok="blok"
+          :is="blok.component"
+        />
+
     </div>
   </article>
 </template>

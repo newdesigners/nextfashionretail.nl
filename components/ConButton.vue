@@ -37,7 +37,7 @@
 
 <style lang="scss">
 .content-button {
-  @apply mr-4 mt-4 lg:mr-10 lg:mt-10 rounded-full px-3 py-0.5 md:px-11 md:py-3 xl:px-14 bg-nfr-green text-[11px] md:text-[20px] lg:text-[24px] font-medium inline-flex items-center;
+  @apply mr-4 mt-4 lg:mr-10 lg:mt-16 rounded-full px-3 py-0.5 md:px-11 md:py-3 xl:px-14 bg-nfr-green text-[11px] md:text-[20px] lg:text-[24px] font-medium inline-flex items-center;
   
   a.router-link-active {
     @apply text-nfr-green;

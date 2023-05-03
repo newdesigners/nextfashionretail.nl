@@ -1,6 +1,5 @@
 <script setup>
   const props = defineProps({ button: Object, type: String })
-  console.log(props);
 </script>
 
 <template>

@@ -13,7 +13,7 @@
   >
     <div class="relative h-[auto] w-full flex justify-center items-center">
       <div class="container relative z-[3] pt-[35%] sm:pt-[12%] lg:pt-[12%]">
-        <h1 class="text-white font-extrabold text-[34px] md:text-40 xl:text-[44px] 2xl:text-[48px] lg:mx-auto md:text-center lg:w-[85%]">{{ blok.headline }}</h1>
+        <h1 class="text-white font-extrabold text-[28px] sm:text-[35px] md:text-40 xl:text-[44px] 2xl:text-[48px] lg:mx-auto md:text-center lg:w-[85%]">{{ blok.headline }}</h1>
       </div>
       <SvgImport
         type="blob-1-stroke"
