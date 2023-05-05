@@ -19,7 +19,7 @@
             :alt="item.image.alt"
           />
         </figure>
-        <p class="flex-1">{{ item.text }}</p>
+        <p class="flex-1 text-[10px] md:text-16">{{ item.text }}</p>
       </li>
     </ul>
   </aside>

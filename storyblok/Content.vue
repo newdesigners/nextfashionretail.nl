@@ -1,4 +1,6 @@
 <script setup>
+import Button from '../components/content/Button.vue';
+
   defineProps({ blok: Object, isFirst: Boolean })
 </script>
 

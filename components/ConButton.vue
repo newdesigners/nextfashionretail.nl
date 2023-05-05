@@ -10,8 +10,8 @@
       :href="button.link.cached_url"
       target="_blank"
       rel="noopener noreferrer"
-      class="main-button"
-      :class="type ? `main-button--${ type }` : ''" 
+      class="content-button"
+      :class="type ? `content-button--${ type }` : ''" 
     >
       <span class="">{{ button.label }}</span>
       <SvgImport
@@ -24,8 +24,8 @@
     <NuxtLink
       v-if="button.link.linktype === 'story'"
       :to="`/${ button.link.cached_url}`"
-      class="main-button"
-      :class="type ? `main-button--${ type }` : ''"  
+      class="content-button"
+      :class="type ? `content-button--${ type }` : ''"  
     >
       <span>{{ button.label }}</span>
       <SvgImport
@@ -36,14 +36,13 @@
 </template>
 
 <style lang="scss">
-.main-button {
-  @apply rounded-full px-3 py-0.5 lg:px-4 lg:py-1 xl:px-5 bg-nfr-green text-[12px] lg:text-[14px] font-medium inline-flex items-center;
+.content-button {
+  @apply mr-4 mt-4 lg:mr-10 lg:mt-16 rounded-full px-3 py-0.5 md:px-11 md:py-3 xl:px-14 bg-nfr-green text-[11px] md:text-[20px] lg:text-[24px] font-medium inline-flex items-center;
   
   a.router-link-active {
     @apply text-nfr-green;
   }
   
-
   span {
     @apply flex-1 pr-1.5 lg:pr-2;
   }
@@ -53,7 +52,7 @@
   }
 
   figure {
-    @apply w-4;
+    @apply w-4 lg:w-[60px] lg:ml-5;
   }
 
   &--big {

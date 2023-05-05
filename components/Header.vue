@@ -8,7 +8,7 @@
   routes.value = [
     {
       name: 'Materialen',
-      url: '/',
+      url: '/materialen',
     },
     {
       name: 'Care',
@@ -18,6 +18,14 @@
       name: 'Makers',
       url: '/duurzaamheid-makers',
     },
+    {
+      name: 'Whitepaper',
+      url: '/whitepaper',
+    },
+    {
+      name: 'Tools',
+      url: '/tools',
+    },
     // {
     //   name: 'Ons verhaal',
     //   url: '/duurzaamheid-ons-verhaal',
@@ -26,6 +34,7 @@
       name: 'Over ons',
       url: '/duurzaamheid-over-ons',
     },
+    
   ]
 
   onMounted(() => {
@@ -89,7 +98,7 @@
 
 <style lang="scss">
 a.router-link-active {
-  @apply text-nfr-green;
+  @apply text-nfr-green underline;
 }
 
 .header {

@@ -1,7 +1,7 @@
 @layer components {
   .rich-text {
     p, a {
-      @apply text-black leading-[1.9] text-12 lg:text-16 2xl:text-18 lg:my-6;
+      @apply text-black md:leading-[32px] text-[10px] lg:text-16 2xl:text-18 lg:my-6;
     }
 
     a, p a {
@@ -35,6 +35,20 @@
     * > img, img {
       @apply w-full aspect-square sm:aspect-[2.36] sm:object-center sm:object-cover h-auto;
     }
+
+    p{
+      @apply my-0
+    }
+    ul{
+      @apply mt-0 md:mb-10
+    }
+      li {
+        @apply my-0;
+        p{
+          @apply my-0
+        }
+      }
+    
 
     // p:has(> img) {
     //   @apply  sm:h-0 sm:relative sm:overflow-hidden sm:bg-nfr-beige sm:pt-[42%];
