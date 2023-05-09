@@ -1,4 +1,6 @@
 <script setup>
+import Text from '../components/content/GridLinkText.vue';
+
   defineProps({ blok: Object })
 </script>
 
@@ -10,7 +12,7 @@
     <div class="container py-14 lg:py-18 xl:py-24">
       <article class="sm:text-center pb-10 sm:pb-16 sm:w-[70%] sm:mx-auto xl:w-3/5">
         <h2 class="pb-5">{{ blok.title }}</h2>
-        <p>{{ blok.description }}</p>
+        <Text :blok="blok"/>
       </article>
       <ul
         v-if="blok.cards"
