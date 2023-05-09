@@ -28,6 +28,10 @@
       @apply list-disc;
     }
 
+    ul ul{
+      list-style-type: "- "
+    }
+
     ol {
       @apply list-decimal;
     }
