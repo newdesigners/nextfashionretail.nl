@@ -9,9 +9,10 @@ import Text from '../components/content/GridLinkText.vue';
     v-editable="blok"
     class="bg-nfr-beige"
   >
-    <div class="container py-14 lg:py-18 xl:py-24">
-      <article class="sm:text-center pb-10 sm:pb-16 sm:w-[70%] sm:mx-auto xl:w-3/5">
-        <h2 class="pb-5">{{ blok.title }}</h2>
+    <div class="container py-6 lg:py-16 xl:py-20">
+      <article class="sm:text-center pb-10 sm:pb-16 sm:mx-auto">
+        <h2 v-if="blok.textleft" class="text-left text-24 lg:text-30 xl:text-40 xl:pb-3.5">{{ blok.title }}</h2>
+        <h2 v-else class="text-24 lg:text-30 xl:text-40 xl:pb-3.5">{{ blok.title }}</h2>
         <Text :blok="blok"/>
       </article>
       <ul
