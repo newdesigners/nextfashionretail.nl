@@ -2,10 +2,12 @@
   let { slug } = useRoute().params
   if (slug.length > 1) slug = slug.join('/')
   const config = useRuntimeConfig()
-  const story = await useStoryblok(slug ? slug : 'home', { version: 'draft' })
+  const story = await useAsyncStoryblok (slug ? slug : 'home', { version: 'draft' })
   const openGraphImage = 'https://a.storyblok.com/f/172899/1200x630/498416cf68/open-graph-sharing-image.jpg'
   const title = story.value.name ? story.value.name : 'Home'
   const description = 'Next Fashion Retail helpt jou met duurzamer worden'
+
+  
 
   useHead({
     titleTemplate: 'Next Fashion Retail | %s',
@@ -94,5 +96,5 @@
 </script>
  
 <template>
-  <StoryblokComponent v-if="story" :story="story" :blok="story.content" />
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>

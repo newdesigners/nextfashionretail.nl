@@ -1,8 +1,9 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 import axios from 'axios'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
   hooks: {
     async "nitro:config"(nitroConfig) {
       if (nitroConfig.dev) return;
@@ -54,7 +55,6 @@ export default defineNuxtConfig({
       });
     },
   },
-  target: 'static',
   css: [
     '~/assets/scss/app.scss',
     '~/assets/scss/hamburger.scss',
