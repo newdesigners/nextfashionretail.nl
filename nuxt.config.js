@@ -56,6 +56,10 @@ export default defineNuxtConfig({
 
       stories.forEach(({ full_slug }) => {
         let slugToAdd = `/${full_slug}`; // Always append a forward slash at the beginning of `full_slug`
+        if (!slugToAdd.endsWith("/")) {
+          // Check if `slugToAdd` already ends with a forward slash
+          slugToAdd += "/"; // If not, append a forward slash at the end
+        }
         nitroConfig.prerender.routes.push(slugToAdd);
       });
     },
