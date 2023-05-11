@@ -3,7 +3,12 @@ import axios from 'axios'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  target: 'static',
+  ssr: true,
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+    },
+  },
   hooks: {
     async "nitro:config"(nitroConfig) {
       if (nitroConfig.dev) return;
