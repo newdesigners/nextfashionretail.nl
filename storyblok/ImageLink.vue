@@ -4,6 +4,7 @@
 
 <template>
   <a
+  
     :href="blok.url.cached_url"
     target="_blank"
     rel="noopener noreferrer"

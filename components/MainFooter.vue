@@ -4,7 +4,7 @@
   routes.value = [
     {
       name: 'Materialen',
-      url: '/materialen',
+      url: '/duurzaamheid-materialen',
     },
     {
       name: 'Care',
@@ -15,12 +15,12 @@
       url: '/duurzaamheid-makers',
     },
     {
-      name: 'Whitepaper',
-      url: '/whitepaper',
+      name: 'Whitepapers',
+      url: '/duurzaamheid-whitepapers',
     },
     {
       name: 'Tools',
-      url: '/tools',
+      url: '/duurzaamheid-tools',
     },
     // {
     //   name: 'Ons verhaal',

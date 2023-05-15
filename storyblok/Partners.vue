@@ -13,6 +13,7 @@
       <aside>
         <ul class="grid grid-cols-3 sm:flex sm:flex-wrap gap-8 sm:gap-9 md:gap-11 xl:gap-9">
           <li
+            class="flex justify-center items-center"
             v-for="partner in blok.partners"
             :key="partner._uid"
           >

@@ -1,7 +1,7 @@
 @layer components {
   .rich-text {
     p, a {
-      @apply text-black md:leading-[32px] text-[10px] lg:text-16 2xl:text-18 lg:my-6;
+      @apply text-black lg:leading-[32px] text-[10px] lg:text-16 2xl:text-18 lg:my-6;
     }
 
     a, p a {
@@ -26,6 +26,10 @@
 
     ul {
       @apply list-disc;
+    }
+
+    ul ul{
+      list-style-type: "- "
     }
 
     ol {
