@@ -51,7 +51,7 @@ export default {
       </svg>
     </div>
 
-    <div class="h-[215px] lg:h-[600px] w-full hover:cursor-pointer" @click="open">
+    <div class="h-[215px] md:h-[350px] lg:h-[500px] xl:h-[570px] 2xl:h-max w-full hover:cursor-pointer" @click="open">
         <video class="w-full h-full object-cover" ref="video" v-if="blok?.src" :src="blok.src.filename + '#t=0.001'" preload="metadata" type='video/mp4' ></video>
     </div>
   </div>

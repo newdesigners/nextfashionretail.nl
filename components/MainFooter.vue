@@ -15,7 +15,7 @@
       url: '/duurzaamheid-makers',
     },
     {
-      name: 'Whitepaper',
+      name: 'Whitepapers',
       url: '/duurzaamheid-whitepapers',
     },
     {
