@@ -13,7 +13,7 @@
     },
     {
       name: 'Care',
-      url: '/duurzaamheid-care/',
+      url: '/duurzaamheid-care',
     },
     {
       name: 'Makers',
