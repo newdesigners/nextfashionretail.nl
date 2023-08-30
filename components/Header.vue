@@ -20,6 +20,10 @@
       url: '/duurzaamheid-makers',
     },
     {
+      name: '30wearschallenge',
+      url: 'duurzaamheid-30wearschallenge/'
+    },
+    {
       name: 'Whitepapers',
       url: '/duurzaamheid-whitepapers',
     },
