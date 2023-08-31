@@ -1,7 +1,10 @@
 <script setup>
+import TextWithButtonClone from '../components/TextWithButtonClone.vue';
 
 const props = defineProps({ blok: Object })
 const cardContent = computed(() => renderRichText(props.blok.description))
+
+const components = {TextWithButtonClone};
 </script>
 
 <template>
@@ -16,7 +19,7 @@ const cardContent = computed(() => renderRichText(props.blok.description))
           v-html="cardContent"
         >
       </article>
-      
+      <!-- <div v-for="blok in props.blok.amount"> -->
       <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
         <DownloadButton :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig }" />
       </aside>
@@ -24,12 +27,13 @@ const cardContent = computed(() => renderRichText(props.blok.description))
       <aside v-else class="flex justify-end mt-4 md:mt-12 items-end">
         <DownloadButton :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig}"/>
       </aside>
+      <!-- </div> -->
 
       <component
           v-for="blok in props.blok.ButtonsWithText"
           :key="blok._uid"
           :blok="blok"
-          :is="blok.component"
+          :is="blok.component === 'ButtonWithText' ? 'TextWithButtonClone' : blok.component"
         />
 
     </div>
