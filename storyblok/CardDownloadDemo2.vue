@@ -1,10 +1,8 @@
 <script setup>
-import TextWithButtonClone from '../components/TextWithButtonClone.vue';
 
 const props = defineProps({ blok: Object })
 const cardContent = computed(() => renderRichText(props.blok.description))
 
-const components = {TextWithButtonClone};
 </script>
 
 <template>
@@ -20,7 +18,7 @@ const components = {TextWithButtonClone};
         >
       </article>
       
-      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
+      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-4">
         <DownloadButtonClone :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig }" />
       </aside>
 
@@ -28,7 +26,7 @@ const components = {TextWithButtonClone};
         <DownloadButtonClone :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig}"/>
       </aside>
 
-      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
+      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-4">
         <DownloadButtonClone :button="{ label : blok.button_label2, link : blok.file2, buttonIsBig : blok.buttonIsBig }" />
       </aside>
 
@@ -36,7 +34,7 @@ const components = {TextWithButtonClone};
         <DownloadButtonClone :button="{ label : blok.button_label2, link : blok.file2, buttonIsBig : blok.buttonIsBig}"/>
       </aside>
 
-      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
+      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-4">
         <DownloadButtonClone :button="{ label : blok.button_label3, link : blok.file3, buttonIsBig : blok.buttonIsBig }" />
       </aside>
 
@@ -44,7 +42,7 @@ const components = {TextWithButtonClone};
         <DownloadButtonClone :button="{ label : blok.button_label3, link : blok.file3, buttonIsBig : blok.buttonIsBig}"/>
       </aside>
 
-      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
+      <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-4">
         <DownloadButtonClone :button="{ label : blok.button_label4, link : blok.file4, buttonIsBig : blok.buttonIsBig }" />
       </aside>
 
