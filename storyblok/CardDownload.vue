@@ -16,7 +16,7 @@ const cardContent = computed(() => renderRichText(props.blok.description))
           v-html="cardContent"
         >
       </article>
-
+      
       <aside v-if="blok.ButtonIsLeft" class="flex justify-start items-end mt-4 md:mt-12">
         <DownloadButton :button="{ label : blok.button_label, link : blok.file, buttonIsBig : blok.buttonIsBig }" />
       </aside>
