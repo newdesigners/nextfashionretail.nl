@@ -5,7 +5,7 @@
 
 <template>
   <section v-editable="blok">
-    <article class="p-8 lg:p-14 xl:p-20 bg-white flex flex-col md:flex-row md:items-center md:justify-between md:flex-wrap">
+    <article class="p-4 md:p-4 lg:p-5 xl:p-8 bg-white flex flex-col md:flex-row md:items-center md:justify-between md:flex-wrap">
       <div
         class="text-center md:text-left md:flex md:flex-col md:md:justify-start pb-3 "
         :class="{ 'md:w-3/4 lg:w-[70%]' : blok.content.image.filename }" 
