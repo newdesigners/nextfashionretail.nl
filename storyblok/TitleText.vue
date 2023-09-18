@@ -1,14 +1,6 @@
 <script setup>
-  // const props = 
-  defineProps({ blok: Object, isFirst: Boolean })
-  // let articleContent;
-
-  // try {
-  //   articleContent = computed(() => renderRichText(props.blok.description))
-  // } catch (error) {
-  //   // Handle the error, e.g., log it or show a fallback content
-  //   console.error('Error rendering rich text:', error)
-  // }
+  const props = defineProps({ blok: Object, isFirst: Boolean })
+  const articleContent = computed(() => renderRichText(props.blok.description)) 
 </script>
 
 <template>
@@ -25,8 +17,9 @@
           <h2>{{ blok.title }}</h2>
         </div>
       </div>
-      <!-- <p v-if="articleContent" class="rich-text prose-sm md:prose-lg lg:prose-xl md:max-w-none" v-html="articleContent"></p> -->
-      <p>{{ blok.description }}</p>
+      <article v-if="articleContent" class="rich-text prose-sm md:prose-lg lg:prose-xl md:max-w-none" v-html="articleContent">
+      </article>
+      <!-- <p>{{ blok.description }}</p> -->
     </div>
   </section>
 </template>
