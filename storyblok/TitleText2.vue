@@ -1,14 +1,6 @@
 <script setup>
   const props = defineProps({ blok: Object, isFirst: Boolean })
   const articleContent = computed(() => renderRichText(props.blok.description)) 
-  // let articleContent;
-
-  // try {
-  //   articleContent = computed(() => renderRichText(props.blok.description))
-  // } catch (error) {
-  //   // Handle the error, e.g., log it or show a fallback content
-  //   console.error('Error rendering rich text:', error)
-  // }
 </script>
 
 <template>
