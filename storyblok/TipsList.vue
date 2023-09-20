@@ -4,7 +4,7 @@
   const tips = ref(null)
   const storyblokApi = useStoryblokApi()
   const { data } = await storyblokApi.get('cdn/stories', { version: 'draft', starts_with: 'duurzaamheid-care' })
-
+  console.log(data.stories)
   tips.value = data.stories.filter((story) => story.is_startpage !== true)
 </script>
 

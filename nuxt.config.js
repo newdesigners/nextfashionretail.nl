@@ -1,8 +1,17 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import axios from 'axios'
+const fs = require('fs');
+
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  
+  // server: {
+  //   https: {
+  //     key: fs.readFileSync('./localhost-key.pem'),
+  //     cert: fs.readFileSync('./localhost.pem'),
+  //   },
+  // },
   ssr: true,
   nitro: {
     prerender: {
