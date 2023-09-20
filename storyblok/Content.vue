@@ -7,11 +7,11 @@ import Button from '../components/content/Button.vue';
 <template>
   <section
     v-editable="blok"
-    :class="[`bg-${ blok.section_background_color }`, { 'bg-inherit' : blok.container_width === 'small' }]" 
+    :class="[`bg-beige-100`, { 'bg-inherit' : blok.container_width === 'small' }]" 
   >
-    <div class="container py-6 lg:py-16 xl:py-20">
+    <div class="container py-6 lg:py-16 xl:py-20 ">
       <article
-        :class="[`bg-${ blok.section_background_color }`, { 'p-9 md:p-14 xl:p-24' : blok.container_width === 'small' }]" 
+        :class="[`bg-white`, { 'p-9 md:p-14 xl:p-24' : blok.container_width === 'small' }]" 
       >
         <aside
           v-if="blok.close_button"
