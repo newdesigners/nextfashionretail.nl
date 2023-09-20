@@ -21,7 +21,7 @@
     },
     {
       name: '30wearschallenge',
-      url: 'duurzaamheid-30wearschallenge/'
+      url: '/duurzaamheid-30wearschallenge'
     },
     {
       name: 'Whitepapers',
