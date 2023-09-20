@@ -56,7 +56,7 @@
 <template>
   <header
     class="fixed top-0 w-full delay-100 transition-height duration-300 ease-in-out h-[110px] bg-transparent overflow-hidden lg:h-[auto] z-50"
-    :class="[{ 'h-[380px] !bg-nfr-beige lg:bg-transparent' : isOpen }, { 'header--scrolled' : isScrolled }]"
+    :class="[{ 'h-[400px] !bg-nfr-beige lg:bg-transparent' : isOpen }, { 'header--scrolled' : isScrolled }]"
   >
     <div class="container lg:flex justify-between items-center">
       <div
@@ -81,7 +81,7 @@
       </div>
       <div
         class="delay-300 transition opacity-0 duration-200 ease-in lg:opacity-100"
-        :class="{ 'opacity-100' : isOpen }"
+        :class="{ 'opacity-100 ' : isOpen }"
       >
         <ul
           @click="onClose"
